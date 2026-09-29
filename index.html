@@ -21,10 +21,59 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header" aria-label="Primary navigation"></header>
+    <header class="site-header">
+      <div class="nav-shell container">
+        <a class="brand" href="#top" aria-label="NOCTRA home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-name">NOCTRA</span>
+        </a>
+
+        <details class="nav-menu">
+          <summary aria-label="Toggle navigation">
+            <span class="menu-label">Menu</span>
+            <span class="menu-icon" aria-hidden="true"></span>
+          </summary>
+          <nav aria-label="Primary navigation">
+            <a href="#performance">Performance</a>
+            <a href="#engineering">Engineering</a>
+            <a href="#craft">Craft</a>
+            <a href="#specifications">Specifications</a>
+          </nav>
+        </details>
+
+        <a class="nav-cta" href="#reserve">Private unveiling</a>
+      </div>
+    </header>
 
     <main id="main-content">
-      <!-- Page sections are implemented in focused slices. -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="White NOCTRA R1 driving through an alpine pass"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <div class="hero-content container">
+          <p class="eyebrow hero-kicker">NOCTRA R1 / All-electric hypercar</p>
+          <h1 id="hero-title">
+            Silence,<br />
+            <span>accelerated.</span>
+          </h1>
+          <p class="hero-copy">
+            A new expression of speed. Sculpted by air, driven by electrons,
+            and engineered without compromise.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#performance">Discover the R1</a>
+            <a class="text-link" href="#specifications">
+              Explore specifications
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#performance">
+          <span>Scroll to explore</span>
+          <span class="scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
     </main>
 
     <footer class="site-footer"></footer>
