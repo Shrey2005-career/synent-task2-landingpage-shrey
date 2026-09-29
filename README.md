@@ -1,6 +1,6 @@
 # NOCTRA R1 — Electric Hypercar Landing Page
 
-A responsive concept landing page for the fictional NOCTRA R1 electric hypercar. The project is built with semantic HTML and modern CSS for Synent Technologies Task 2.
+A responsive concept landing page for the fictional NOCTRA R1 electric hypercar. The project is built with semantic HTML and modern CSS for Synent Technologies Task 2, with a tiny JavaScript enhancement for mobile-menu usability.
 
 ## Features
 
@@ -16,6 +16,7 @@ A responsive concept landing page for the fictional NOCTRA R1 electric hypercar.
 .
 |-- assets/
 |-- index.html
+|-- script.js
 |-- styles.css
 |-- README.md
 `-- .gitignore

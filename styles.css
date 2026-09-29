@@ -47,6 +47,10 @@ a {
   text-decoration: none;
 }
 
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 button,
 input {
   font: inherit;
@@ -106,12 +110,14 @@ p {
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(8, 10, 13, 0.58), rgba(8, 10, 13, 0.18));
+  backdrop-filter: blur(0.75rem);
 }
 
 .nav-shell {
@@ -130,6 +136,7 @@ p {
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.28em;
+  min-height: 2.75rem;
 }
 
 .brand-mark {
@@ -145,13 +152,8 @@ p {
   letter-spacing: 0;
 }
 
-.nav-menu summary {
-  display: none;
-  list-style: none;
-  cursor: pointer;
-}
-
-.nav-menu summary::-webkit-details-marker {
+.nav-toggle,
+.nav-trigger {
   display: none;
 }
 
@@ -793,7 +795,7 @@ p {
     justify-self: end;
   }
 
-  .nav-menu summary {
+  .nav-trigger {
     display: flex;
     align-items: center;
     gap: 0.7rem;
@@ -802,6 +804,8 @@ p {
     font-size: 0.72rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    cursor: pointer;
+    min-height: 2.75rem;
   }
 
   .menu-icon,
@@ -851,8 +855,27 @@ p {
     padding: 0.8rem 0.75rem;
   }
 
-  .nav-menu[open] nav {
+  .nav-toggle:checked ~ nav {
     display: grid;
+  }
+
+  .nav-toggle:focus-visible + .nav-trigger {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 0.35rem;
+  }
+
+  .nav-toggle:checked + .nav-trigger .menu-icon {
+    background: transparent;
+  }
+
+  .nav-toggle:checked + .nav-trigger .menu-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-trigger .menu-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 
   .nav-cta {
@@ -895,10 +918,6 @@ p {
 }
 
 @media (max-width: 40rem) {
-  .site-header {
-    position: absolute;
-  }
-
   .nav-shell {
     min-height: 4.75rem;
   }
@@ -914,7 +933,8 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 19vw, 5.25rem);
+    font-size: clamp(3rem, 14vw, 4rem);
+    letter-spacing: -0.055em;
   }
 
   .hero-content {
