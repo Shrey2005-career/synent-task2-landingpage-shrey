@@ -409,7 +409,7 @@ p {
   line-height: 0.85;
 }
 
-.stat span {
+.stat .counter-visual > span, .stat dd > span:not(.sr-only):not(.counter-visual) {
   color: var(--color-accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -1039,6 +1039,19 @@ p {
     flex-direction: column;
   }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.stat .counter-visual { display: flex; align-items: baseline; gap: 0.55rem; }
+[data-count-final] { font-variant-numeric: tabular-nums; }
 
 .reveal {
   opacity: 0;
