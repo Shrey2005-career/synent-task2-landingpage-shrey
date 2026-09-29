@@ -28,5 +28,5 @@ Open `index.html` directly in a browser, or serve the folder with any static dev
 
 ## Attribution
 
-This is an educational, non-commercial concept project. NOCTRA Motors and the R1 are fictional. The vehicle photographs are used as visual references for the concept and are not presented as an original vehicle design.
+This is an educational concept project. NOCTRA Motors and the R1 are fictional. The vehicle images were generated with AI tools and supplied by Shrey for this project.
 

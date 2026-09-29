@@ -1040,7 +1040,17 @@ p {
   }
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 800ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left { transform: translateX(-2.5rem); }
+.reveal.is-visible, .reveal:focus-within { opacity: 1; transform: none; }
+
 @media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
   html {
     scroll-behavior: auto;
   }
